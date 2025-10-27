@@ -148,15 +148,15 @@ print(f"Sharpe Ratio: {metrics['sharpe']:.2f}")
 portfolio-optimization/
 ├── src/
 │   └── portfolio_optimization/
-│       ├── __init__.py
-│       ├── optimizer.py          # Main optimization engine
-│       ├── risk_metrics.py       # Risk calculation functions
-│       ├── data_sources/         # Data source integrations
-│       └── visualization.py      # Plotting and charting
-├── examples/                     # Usage examples and tutorials
-├── tests/                        # Test suite
-├── requirements.txt              # Project dependencies
-└── setup.py                     # Package configuration
+│    ├── __init__.py
+│    ├── optimizer.py          - Main optimization engine
+│    ├── risk_metrics.py       - Risk calculation functions
+│    ├── data_sources/         - Data source integrations
+│        └── visualization.py     - Plotting and charting
+├── examples/                     - Usage examples and tutorials
+├── tests/                        - Test suite
+├── requirements.txt              - Project dependencies
+└── setup.py                      - Package configuration
 
 ## 🤝 Contributing
 
@@ -176,3 +176,4 @@ Feel free to fork the repository and submit pull requests for any improvements.
 
 
 This project is open source and available under the MIT License.
+
