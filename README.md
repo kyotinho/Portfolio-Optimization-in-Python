@@ -65,54 +65,65 @@ All dependencies are automatically installed with the package installation.
 ## 💻 Usage
 
 ### Basic Setup
-
+```
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import optimize
 from sklearn import preprocessing
 import portfolio_optimization as po
+```
 
 #### Set pandas display options for better data frame visualization
+```
 pd.set_option('display.max_columns', None)
 pd.set_option('display.expand_frame_repr', False)
-
+```
 ## Getting Started
 
 ### Load your price data (example with Nasdaq data)
+```
 from portfolio_optimization.data_sources import nasdaq
-
+```
 ### Initialize portfolio optimizer
+```
 optimizer = po.PortfolioOptimizer()
-
+```
 ### Add assets and their price data
+```
 optimizer.add_asset('AAPL', apple_prices)
 optimizer.add_asset('TSLA', tesla_prices)
 optimizer.add_asset('MSFT', microsoft_prices)
-
+```
 ### Run optimization for target risk level
+```
 optimal_weights = optimizer.optimize_for_risk(target_risk=0.15)
-
+```
 ### Analyze results
+```
 optimizer.plot_efficient_frontier()
 optimizer.calculate_portfolio_metrics()
-
+```
 ## Data Sources
 
 The library supports multiple data sources:
 
 ### Using Yahoo Finance
+```
 from portfolio_optimization.data_sources import yahoo_finance
-
+```
 ### Using Nasdaq
+```
 from portfolio_optimization.data_sources import nasdaq
-
-### Using Alpha Vantage  
+```
+### Using Alpha Vantage
+```
 from portfolio_optimization.data_sources import alpha_vantage
-
+```
 ### Custom data (CSV, Excel, etc.)
+```
 prices = pd.read_csv('your_price_data.csv')
-
+```
 
 ## 🎯 Portfolio Optimization Methods
 
@@ -128,21 +139,23 @@ Maximizes returns for a given level of risk tolerance specified by the user.
 ## 📈 Example: Building an Optimal Portfolio
 
 ### Define your risk tolerance (standard deviation)
+```
 risk_tolerance = 0.18  # 18% annual volatility
-
+```
 ### Get optimal portfolio weights
+```
 weights = optimizer.optimize_for_risk(risk_tolerance)
-
 print("Optimal Portfolio Allocation:")
 for stock, weight in weights.items():
     print(f"{stock}: {weight:.2%}")
-
+```
 ### Calculate expected portfolio metrics
+```
 metrics = optimizer.calculate_metrics(weights)
 print(f"Expected Return: {metrics['return']:.2%}")
 print(f"Expected Risk: {metrics['risk']:.2%}")
 print(f"Sharpe Ratio: {metrics['sharpe']:.2f}")
-
+```
 ## 🏗 Project Structure
 ```
 portfolio-optimization/
@@ -177,5 +190,6 @@ Feel free to fork the repository and submit pull requests for any improvements.
 
 
 This project is open source and available under the MIT License.
+
 
 
