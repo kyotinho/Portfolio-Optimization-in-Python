@@ -1,4 +1,4 @@
-# Portfolio Optimization with Python
+# Portfolio Optimization with Python 🐍📈
 
 [![Python Version](https://img.shields.io/badge/python-3.7%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -32,22 +32,17 @@ Portfolio optimization is the process of selecting the best portfolio of financi
 - pip package manager
 
 ### Clone and Install
-    **- Clone the repository**
+    - Clone the repository
     git clone https://github.com/yourusername/portfolio-optimization.git
 
-    **- Navigate to the project directory**
+    - Navigate to the project directory
     cd portfolio-optimization
     
-    **- Install in editable mode (allows modifications and use in other scripts)**
+    - Install in editable mode (allows modifications and use in other scripts)
     pip install -e .
 
 The -e flag installs the package in editable mode, meaning you can modify the code and see changes reflected across all your scripts that use this library.
 
-///
-
-The Session below aims to explain how the project works
-
-///
 
 ## 📦 Dependencies
 
@@ -70,54 +65,65 @@ All dependencies are automatically installed with the package installation.
 ## 💻 Usage
 
 ### Basic Setup
-
+```
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy import optimize
 from sklearn import preprocessing
 import portfolio_optimization as po
+```
 
 #### Set pandas display options for better data frame visualization
+```
 pd.set_option('display.max_columns', None)
 pd.set_option('display.expand_frame_repr', False)
-
+```
 ## Getting Started
 
 ### Load your price data (example with Nasdaq data)
+```
 from portfolio_optimization.data_sources import nasdaq
-
+```
 ### Initialize portfolio optimizer
+```
 optimizer = po.PortfolioOptimizer()
-
+```
 ### Add assets and their price data
+```
 optimizer.add_asset('AAPL', apple_prices)
 optimizer.add_asset('TSLA', tesla_prices)
 optimizer.add_asset('MSFT', microsoft_prices)
-
+```
 ### Run optimization for target risk level
+```
 optimal_weights = optimizer.optimize_for_risk(target_risk=0.15)
-
+```
 ### Analyze results
+```
 optimizer.plot_efficient_frontier()
 optimizer.calculate_portfolio_metrics()
-
+```
 ## Data Sources
 
 The library supports multiple data sources:
 
 ### Using Yahoo Finance
+```
 from portfolio_optimization.data_sources import yahoo_finance
-
+```
 ### Using Nasdaq
+```
 from portfolio_optimization.data_sources import nasdaq
-
-### Using Alpha Vantage  
+```
+### Using Alpha Vantage
+```
 from portfolio_optimization.data_sources import alpha_vantage
-
+```
 ### Custom data (CSV, Excel, etc.)
+```
 prices = pd.read_csv('your_price_data.csv')
-
+```
 
 ## 🎯 Portfolio Optimization Methods
 
@@ -133,35 +139,38 @@ Maximizes returns for a given level of risk tolerance specified by the user.
 ## 📈 Example: Building an Optimal Portfolio
 
 ### Define your risk tolerance (standard deviation)
+```
 risk_tolerance = 0.18  # 18% annual volatility
-
+```
 ### Get optimal portfolio weights
+```
 weights = optimizer.optimize_for_risk(risk_tolerance)
-
 print("Optimal Portfolio Allocation:")
 for stock, weight in weights.items():
     print(f"{stock}: {weight:.2%}")
-
+```
 ### Calculate expected portfolio metrics
+```
 metrics = optimizer.calculate_metrics(weights)
 print(f"Expected Return: {metrics['return']:.2%}")
 print(f"Expected Risk: {metrics['risk']:.2%}")
 print(f"Sharpe Ratio: {metrics['sharpe']:.2f}")
-
+```
 ## 🏗 Project Structure
-
+```
 portfolio-optimization/
 ├── src/
 │   └── portfolio_optimization/
-│       ├── __init__.py
-│       ├── optimizer.py          # Main optimization engine
-│       ├── risk_metrics.py       # Risk calculation functions
-│       ├── data_sources/         # Data source integrations
-│       └── visualization.py      # Plotting and charting
-├── examples/                     # Usage examples and tutorials
-├── tests/                        # Test suite
-├── requirements.txt              # Project dependencies
-└── setup.py                     # Package configuration
+│    ├── __init__.py
+│    ├── optimizer.py          - Main optimization engine
+│    ├── risk_metrics.py       - Risk calculation functions
+│    ├── data_sources/         - Data source integrations
+│        └── visualization.py     - Plotting and charting
+├── examples/                     - Usage examples and tutorials
+├── tests/                        - Test suite
+├── requirements.txt              - Project dependencies
+└── setup.py                      - Package configuration
+```
 
 ## 🤝 Contributing
 
@@ -179,4 +188,9 @@ Feel free to fork the repository and submit pull requests for any improvements.
 
 ## 📝 License
 
+
 This project is open source and available under the MIT License.
+
+
+
+
