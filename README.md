@@ -32,22 +32,17 @@ Portfolio optimization is the process of selecting the best portfolio of financi
 - pip package manager
 
 ### Clone and Install
-    **- Clone the repository**
+    - Clone the repository
     git clone https://github.com/yourusername/portfolio-optimization.git
 
-    **- Navigate to the project directory**
+    - Navigate to the project directory
     cd portfolio-optimization
     
-    **- Install in editable mode (allows modifications and use in other scripts)**
+    - Install in editable mode (allows modifications and use in other scripts)
     pip install -e .
 
 The -e flag installs the package in editable mode, meaning you can modify the code and see changes reflected across all your scripts that use this library.
 
-///
-
-The Session below aims to explain how the project works
-
-///
 
 ## 📦 Dependencies
 
@@ -178,5 +173,6 @@ Python developers interested in financial applications
 Feel free to fork the repository and submit pull requests for any improvements.
 
 ## 📝 License
+
 
 This project is open source and available under the MIT License.
