@@ -144,7 +144,7 @@ print(f"Expected Risk: {metrics['risk']:.2%}")
 print(f"Sharpe Ratio: {metrics['sharpe']:.2f}")
 
 ## 🏗 Project Structure
-
+```
 portfolio-optimization/
 ├── src/
 │   └── portfolio_optimization/
@@ -157,6 +157,7 @@ portfolio-optimization/
 ├── tests/                        - Test suite
 ├── requirements.txt              - Project dependencies
 └── setup.py                      - Package configuration
+```
 
 ## 🤝 Contributing
 
@@ -176,4 +177,5 @@ Feel free to fork the repository and submit pull requests for any improvements.
 
 
 This project is open source and available under the MIT License.
+
 
