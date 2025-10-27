@@ -1,4 +1,4 @@
-# Portfolio Optimization with Python
+# Portfolio Optimization with Python 🐍📈
 
 [![Python Version](https://img.shields.io/badge/python-3.7%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -190,6 +190,7 @@ Feel free to fork the repository and submit pull requests for any improvements.
 
 
 This project is open source and available under the MIT License.
+
 
 
 
